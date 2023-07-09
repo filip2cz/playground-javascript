@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='cs'>
+<head>
+<title>Kalkulačka</title>
+<meta charset='utf-8'>
+<!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+</head>
+<body>
+<input id="cisloa">
+<input id="cislob">
+<span id="vysledek"></span><br><br>
+<button onclick="scitani()">Sčítej!</button>
+<button onclick="odcitani()">Odčítej!</button>
+<button onclick="nasob()">Násob!</button>
+<button onclick="vydel()">Vyděl!</button>
+<script>
+function scitani(){
+a = Number(document.getElementById('cisloa').value);
+b = Number(document.getElementById('cislob').value);
+vysledek = a + b;
+document.getElementById('vysledek').innerHTML = vysledek;
+}
+function odcitani(){
+a = Number(document.getElementById('cisloa').value);
+b = Number(document.getElementById('cislob').value);
+vysledek = a - b;
+document.getElementById('vysledek').innerHTML = vysledek;
+}
+function nasob(){
+a = Number(document.getElementById('cisloa').value);
+b = Number(document.getElementById('cislob').value);
+vysledek = a * b;
+document.getElementById('vysledek').innerHTML = vysledek;
+}
+function vydel(){
+a = Number(document.getElementById('cisloa').value);
+b = Number(document.getElementById('cislob').value);
+vysledek = a / b;
+vysledek = Math.floor(vysledek);
+zbytek = a % b;
+document.getElementById('vysledek').innerHTML = vysledek + ", zbytek je " + zbytek;
+}
+</script>
+</body>
+</html>
